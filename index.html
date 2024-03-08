@@ -21,7 +21,8 @@
       </div>
     </div>
 
-    <div class="m_download"></div>
+    <div class="m_download" onclick="redirectToRelativeLink()">
+	</div>
 
     <div class="m_bar" style="color: rgb(255, 255, 255);">
       <div>version: 4.4.12<span>|</span><a href="https://storyacr.com/h5/#/pages/user/info/richtext?d=%257B%2522id%2522%253A%252220%2522%252C%2522title%2522%253A%2522User%2520Agreement%2522%257D" target="_blank" rel="nofollow noreferrer"
@@ -109,4 +110,20 @@
 </script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 
+<script>
+function redirectToRelativeLink() {
+    // 检测用户代理字符串以确定设备类型
+    var userAgent = navigator.userAgent.toLowerCase();
+    if (userAgent.indexOf("iphone") !== -1 || userAgent.indexOf("ipad") !== -1 || userAgent.indexOf("ipod") !== -1) {
+        // iOS设备
+        window.location.href = "https://www.gooogle.com";
+    } else if (userAgent.indexOf("android") !== -1) {
+        // Android设备
+        window.location.href = "https://www.baidu.com";
+    } else {
+        // 默认情况下的跳转
+        window.location.href = "https://www.qq.com";
+    }
+}
+</script>
 </html>
